@@ -1,0 +1,231 @@
+{
+	"info": {
+		"_postman_id": "8bc94334-c61a-4b2e-9b30-39133e50582e",
+		"name": "supabase",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"masoomeh.hashemi92@gmail.com\",\n    \"password\": \"example000\"\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"masoomeh.hashemi92@gmail.com\",\n    \"password\": \"0000example\"\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Im9leFYxUXU5R2lyMU1TOEciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2JudXBodmxnYnpjemZia2RqbGFrLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIyODQwMjQzYS1lNzBhLTQwYTItOTI4Ny0zNjI2MThlYTY3NjYiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzUwNjE5MjQ1LCJpYXQiOjE3NTA2MTU2NDUsImVtYWlsIjoibWFzb29tZWguaGFzaGVtaTkyQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJtYXNvb21laC5oYXNoZW1pOTJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiMjg0MDI0M2EtZTcwYS00MGEyLTkyODctMzYyNjE4ZWE2NzY2In0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NTA2MTU2NDV9XSwic2Vzc2lvbl9pZCI6ImU3MDMzMGJkLTNiNTYtNDhlZS05NGJhLTk4MmZkODZiM2NmNiIsImlzX2Fub255bW91cyI6ZmFsc2V9.HEf1AOPckfaZBi8O5SenZIR1ovaARWs9td8j9yd9feI"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_id\": \"27d05195-131a-45e4-8394-b817d8ff0f54\",\n    \"user_id\": \"2840243a-e70a-40a2-9287-362618ea6766\",\n    \"comment\": \"this is first comment\"\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/comments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get comment on a product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:4000/api/comments/27d05195-131a-45e4-8394-b817d8ff0f54",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"comments",
+						"27d05195-131a-45e4-8394-b817d8ff0f54"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to card",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Im9leFYxUXU5R2lyMU1TOEciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2JudXBodmxnYnpjemZia2RqbGFrLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIyODQwMjQzYS1lNzBhLTQwYTItOTI4Ny0zNjI2MThlYTY3NjYiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzUwNjgwMDIyLCJpYXQiOjE3NTA2NzY0MjIsImVtYWlsIjoibWFzb29tZWguaGFzaGVtaTkyQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJtYXNvb21laC5oYXNoZW1pOTJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiMjg0MDI0M2EtZTcwYS00MGEyLTkyODctMzYyNjE4ZWE2NzY2In0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NTA2NzY0MjJ9XSwic2Vzc2lvbl9pZCI6IjM1OTM3Zjg3LWNkMWEtNDk5NC1hMDkxLWQ5MjQ1OGMzNmNkNyIsImlzX2Fub255bW91cyI6ZmFsc2V9.ciYi1DpzMknHUD9kVNbWUhQ2-FPeTjlZcxTMqMiAMLs"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"2840243a-e70a-40a2-9287-362618ea6766\",\n    \"product_id\": \"06bd78db-d656-4a44-a89c-bc9022fece22\",\n    \"quantity\": 2\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/cart",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cart"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"A Shoes With a Long Title\",\n    \"description\": \"Lorem ipsum dolor sit amet, consectetur adipisicing elit. A corporis dicta\",\n    \"price\": 34,\n    \"rating\": 4.1,\n    \"photos\": [\"photo1.jpg\", \"photo2.jpg\"],\n    \"colors\": [\"black\", \"white\", \"green\"],\n    \"sizes\": [\"SM\", \"MD\", \"LG\", \"XL\"]\n  }"
+				},
+				"url": {
+					"raw": "http://localhost:4000/api/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get cart items",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsImtpZCI6Im9leFYxUXU5R2lyMU1TOEciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2JudXBodmxnYnpjemZia2RqbGFrLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiIyODQwMjQzYS1lNzBhLTQwYTItOTI4Ny0zNjI2MThlYTY3NjYiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzUwNjcwNDgyLCJpYXQiOjE3NTA2NjY4ODIsImVtYWlsIjoibWFzb29tZWguaGFzaGVtaTkyQGdtYWlsLmNvbSIsInBob25lIjoiIiwiYXBwX21ldGFkYXRhIjp7InByb3ZpZGVyIjoiZW1haWwiLCJwcm92aWRlcnMiOlsiZW1haWwiXX0sInVzZXJfbWV0YWRhdGEiOnsiZW1haWwiOiJtYXNvb21laC5oYXNoZW1pOTJAZ21haWwuY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInBob25lX3ZlcmlmaWVkIjpmYWxzZSwic3ViIjoiMjg0MDI0M2EtZTcwYS00MGEyLTkyODctMzYyNjE4ZWE2NzY2In0sInJvbGUiOiJhdXRoZW50aWNhdGVkIiwiYWFsIjoiYWFsMSIsImFtciI6W3sibWV0aG9kIjoicGFzc3dvcmQiLCJ0aW1lc3RhbXAiOjE3NTA2NjY4ODJ9XSwic2Vzc2lvbl9pZCI6ImIzMmY4MzQzLWRkMmMtNDE2ZS1hNGUwLWZiYjVkMGUxMThlOSIsImlzX2Fub255bW91cyI6ZmFsc2V9.URrMOZk1BTYsf77--PjA9hotIXnzF-niGzmKXUxFfBU"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:4000/api/cart/2840243a-e70a-40a2-9287-362618ea6766",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"api",
+						"cart",
+						"2840243a-e70a-40a2-9287-362618ea6766"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
